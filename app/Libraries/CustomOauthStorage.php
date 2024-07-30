@@ -76,7 +76,8 @@ class CustomOauthStorage implements
             'access_token_table' => 'oauth_access_tokens',
             'refresh_token_table' => 'oauth_refresh_tokens',
             'code_table' => 'oauth_authorization_codes',
-            'user_table' => 'users',
+            // 'user_table' => 'users',
+            'user_table' => 'usuarios',
             'jwt_table'  => 'oauth_jwt',
             'jti_table'  => 'oauth_jti',
             'scope_table'  => 'oauth_scopes',
@@ -431,7 +432,7 @@ class CustomOauthStorage implements
      */
     protected function checkPassword($user, $password)
     {
-        return password_verify($password,  $user['password']);
+        return password_verify($password,  $user['clave']);
         // return $user['password'] == $this->hashPassword($password);
     }
 
@@ -457,7 +458,7 @@ class CustomOauthStorage implements
 
         // the default behavior is to use "username" as the user_id
         return array_merge(array(
-            'user_id' => $user['id']
+            'user_id' => $user['IdUsuario']
         ), $user);
     }
 
