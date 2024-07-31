@@ -21,25 +21,25 @@ class UsuariosModel extends Model
     protected $beforeInsert = ['beforeInsert'];
     protected $beforeUpdate = ['beforeUpdate'];
 
-    protected $validationRules = [
-        "Usuario" => 'required|max_length[30]',
-        "Clave" => 'required|max_length[255]|min_length[10]',
-        "Tipo" => 'required',
-    ];
-    protected $validationMessages = [
-        'Usuario' => [
-            'required' => 'El valor es requerido',
-            'max_length' => 'Debe tener 30 caracteres como maximo'
-        ],
-        'Clave' => [
-            'required' => 'El valor es requerido',
-            'min_length' => 'Debe contener al menos 8 caracteres',
-            'max_length' => 'Debe contener menos que 255 caracteres'
-        ],
-        'Tipo' => [
-            'required' => 'El valor es requerido'
-        ]
-    ];
+    // protected $validationRules = [
+    //     "Usuario" => 'required|max_length[30]',
+    //     "Clave" => 'required|max_length[255]|min_length[10]',
+    //     "Tipo" => 'required',
+    // ];
+    // protected $validationMessages = [
+    //     'Usuario' => [
+    //         'required' => 'El valor es requerido',
+    //         'max_length' => 'Debe tener 30 caracteres como maximo'
+    //     ],
+    //     'Clave' => [
+    //         'required' => 'El valor es requerido',
+    //         'min_length' => 'Debe contener al menos 8 caracteres',
+    //         'max_length' => 'Debe contener menos que 255 caracteres'
+    //     ],
+    //     'Tipo' => [
+    //         'required' => 'El valor es requerido'
+    //     ]
+    // ];
 
     protected function beforeInsert(array $data)
     {
