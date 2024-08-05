@@ -70,6 +70,23 @@ class Filters extends BaseConfig
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
     public array $filters = [
-        'oauthfilter' => ['before' => ['blog', 'blog/*']],
+        'oauthfilter' => [
+            'before' => [
+                'blog',
+                'blog/*',
+                'API/tutores',
+                'API/tutores/*',
+                'API/estudiantes',
+                'API/estudiantes/*',
+                'API/cursos',
+                'API/cursos/*',
+                'API/estudiantescursos/',
+                'API/estudiantescursos/*',
+                'API/actividades/',
+                'API/actividades/*',
+                'API/actividadesestudiantes/',
+                'API/actividadesestudiantes/*',
+            ]
+        ],
     ];
 }
