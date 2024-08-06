@@ -74,6 +74,9 @@ class Filters extends BaseConfig
             'before' => [
                 'blog',
                 'blog/*',
+                'API/usuarios/register',
+                'API/usuarios/index',
+                'API/usuarios/',
                 'API/tutores',
                 'API/tutores/*',
                 'API/estudiantes',
